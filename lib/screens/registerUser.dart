@@ -119,7 +119,7 @@ class _RegisterUserState extends State<RegisterUser> {
         final response = await http.post(Uri.parse(url),
             headers: header, body: documentFile.bytes);
         var data = jsonDecode(response.body);
-        //print(data);
+        print(data);
         if (data['ok']) {
           cid = data["value"]["cid"];
           docUrl = "https://" + cid + ".ipfs.dweb.link";
